@@ -107,6 +107,8 @@ class BeritaController extends Controller
             'status' => $request->status
         ]);
 
+        // dd($berita);
+
         return redirect()
             ->route('viewBerita')
             ->with('success', 'Berita berhasil diperbarui');

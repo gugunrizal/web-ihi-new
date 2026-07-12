@@ -12,7 +12,7 @@
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('viewDashboard')}}">Home</a></li>
                     <li class="breadcrumb-item"><a href="{{route('viewBerita')}}">Berita</a></li>
-                    <li class="breadcrumb-item">Tambah</li>
+                    <li class="breadcrumb-item">Edit</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -42,11 +42,12 @@
                                 <div class="card-body personal-info">
                                     <div class="mb-4 d-flex align-items-center justify-content-between">
                                         <h5 class="fw-bold mb-0 me-4">
-                                            <span class="d-block mb-2">Tambah Berita Baru</span>
+                                            <span class="d-block mb-2">Edit Berita</span>
                                         </h5>
                                     </div>
-                                    <form action="{{ route('updateBerita', $berita->id) }}" method="PUT" enctype="multipart/form-data">
+                                    <form action="{{ route('updateBerita', $berita->id) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
+                                        @method('PUT')
                                         <div class="row mb-4 align-items-center">
                                             <div class="col-lg-2">
                                                 <label class="fw-semibold">Kategori Berita: </label>
@@ -128,7 +129,12 @@
                                             <div class="col-lg-2">
                                                 <label class="fw-semibold" for="gambar">Thumbnail Berita: </label>
                                             </div>
-                                            <div class="col-lg-10">
+                                            <div class="col-lg-2">
+                                                <div class="mb-4 mb-md-0 d-flex gap-4 your-brand">
+                                                    <img src="{{ asset('storage/' . $berita->gambar_berita) }}" alt="Thumbnail Berita" class="img-thumbnail" style="max-width: 200px;">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
                                                 <div class="mb-4 mb-md-0 d-flex gap-4 your-brand">
                                                     <input class="file-upload form-control" type="file" name="thumbnail" id="thumbnail">
                                                 </div>

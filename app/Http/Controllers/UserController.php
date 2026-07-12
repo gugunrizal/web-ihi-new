@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -14,6 +17,33 @@ class UserController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
         return view('index', ['data' => $data]);
+    }
+
+    public function viewLogin()
+    {
+        return view('admin.user.login');
+    }
+
+    public function login(Request $request)
+    {
+        $credential = $request->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+        if (Auth::attempt($credential)) {
+            $request->session()->regenerate();
+            return redirect()->route('viewDashboard');
+        }
+
+        return back()->with('error', 'Username atau Password salah.');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
     }
 
     public function tentangKami()
@@ -60,16 +90,6 @@ class UserController extends Controller
     {
         return view('kontak-kami');
     }
-
-    public function login()
-    {
-        return view('admin.user.login');
-    }
-
-    // public function dashboard()
-    // {
-    //     return view('admin.dashboard');
-    // }
 
     public function greenLeadership()
     {

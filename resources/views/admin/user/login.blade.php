@@ -13,7 +13,7 @@
     <title>Login | Web IHI</title>
     <!--! END:  Apps Title-->
     <!--! BEGIN: Favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/logo-ihi.png')}}">
     <!--! END: Favicon-->
     <!--! BEGIN: Bootstrap CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
@@ -44,13 +44,19 @@
                         <img src="{{asset('img/black-logo-ihi.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="card-body p-sm-5">
+                        @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                        @endif
                         <h2 class="fs-20 fw-bolder mb-4">Login Web IHI</h2>
-                        <form action="index.html" class="w-100 mt-4 pt-2">
+                        <form action="{{route('login')}}" class="w-100 mt-4 pt-2" method="POST">
+                            @csrf
                             <div class="mb-4">
-                                <input type="username" name="username" class="form-control" placeholder="Username" value="admin" required>
+                                <input type="username" name="username" class="form-control" placeholder="Username" required>
                             </div>
                             <div class="mb-3">
-                                <input type="password" name="password" class="form-control" placeholder="Password" value="123456" required>
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
                             </div>
                             <!-- <div class="d-flex align-items-center justify-content-between">
                                 <div>
@@ -64,8 +70,8 @@
                                 </div>
                             </div> -->
                             <div class="mt-5">
-                                <!-- <button type="submit" class="btn btn-lg btn-primary w-100">Login</button> -->
-                                <a href="{{route('viewDashboard')}}" class="btn btn-lg btn-success w-100">Login</a>
+                                <button type="submit" class="btn btn-lg btn-success w-100">Login</button>
+                                <!-- <a href="{{route('viewDashboard')}}" class="btn btn-lg btn-success w-100">Login</a> -->
                             </div>
                         </form>
                     </div>

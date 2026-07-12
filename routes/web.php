@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Login User
-Route::get('/login', [UserController::class, 'login'])->name('viewLogin');
+Route::get('/login', [UserController::class, 'viewLogin'])->name('viewLogin');
+Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 // Admin Dashboard
 // Route::get('/admin', [UserController::class, 'dashboard'])->name('viewDashboard');
-Route::prefix('/admin')->controller(BeritaController::class)->group(function () {
+Route::prefix('/admin')->middleware('admin')->controller(BeritaController::class)->group(function () {
     Route::get('/', 'viewDashboard')->name('viewDashboard');
     Route::get('/berita', 'viewBerita')->name('viewBerita');
     Route::get('/tambah-berita', 'viewTambahBerita')->name('viewTambahBerita');
