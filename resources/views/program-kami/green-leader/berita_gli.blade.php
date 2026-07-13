@@ -34,7 +34,7 @@
         </div>
         <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar menu-bg-gli">
             <div class="container">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{route('viewGreenLeadership')}}" class="navbar-brand">
                     <img src="{{asset('img/logo-program/Logo-GLI.png')}}" alt="" class="img-fluid" width="10%">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,13 +95,13 @@
                     <!-- Blog Item Starts -->
                     <div class="blog-item-wrapper">
                         <div class="blog-item-img">
-                            <a href="single-post.html">
-                                <img src="{{asset('img/' . $br->gambar_berita )}}" class="img-fluid" alt="">
+                            <a href="{{ route('viewDetailBerita', ['slug' => $br->slug]) }}">
+                                <img src="{{asset('storage/' . $br->gambar_berita )}}" class="img-fluid" alt="">
                             </a>
                         </div>
                         <div class="blog-item-text">
                             <h3>
-                                <a href="single-post.html">
+                                <a href="{{ route('viewDetailBerita', ['slug' => $br->slug]) }}">
                                     {{Str::limit($br->judul, 50)}}
                                 </a>
                             </h3>

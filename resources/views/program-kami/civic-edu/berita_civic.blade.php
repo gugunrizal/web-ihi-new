@@ -34,7 +34,7 @@
         </div>
         <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar menu-bg-civic">
             <div class="container">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{route('viewCivicEducation')}}" class="navbar-brand">
                     <img src="{{asset('img/logo-program/logo-civic-white.png')}}" alt="" class="img-fluid" width="10%">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,7 +96,7 @@
                     <div class="blog-item-wrapper">
                         <div class="blog-item-img">
                             <a href="single-post.html">
-                                <img src="{{asset('img/' . $br->gambar_berita )}}" class="img-fluid" alt="">
+                                <img src="{{asset('storage/' . $br->gambar_berita )}}" class="img-fluid" alt="">
                             </a>
                         </div>
                         <div class="blog-item-text">

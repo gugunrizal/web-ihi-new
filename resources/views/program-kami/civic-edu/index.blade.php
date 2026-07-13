@@ -35,7 +35,7 @@
         </div>
         <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar menu-bg-civic">
             <div class="container">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{route('viewCivicEducation')}}" class="navbar-brand">
                     <img src="{{asset('img/logo-program/logo-civic-white.png')}}" alt="" class="img-fluid" width="10%">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

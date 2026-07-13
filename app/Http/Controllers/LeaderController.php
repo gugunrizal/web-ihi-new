@@ -38,21 +38,39 @@ class LeaderController extends Controller
         ]);
     }
 
-    public function viewBeritaGLI($slug)
+    // public function viewBeritaGLI($slug)
+    // {
+    //     $berita = Berita::select('*')
+    //         ->where('slug', $slug)
+    //         ->get();
+
+    //     $kategori = ['GROW', 'GLI', 'SUAR', 'After Class Report'];
+    //     $beritaFull = Berita::select('*')
+    //         ->whereIn('kategori', $kategori)
+    //         ->orderBy('tanggal_rilis', 'desc')
+    //         ->get();
+
+    //     return view('program-kami.green-leader.berita_gli', [
+    //         'berita' => $berita,
+    //         'beritaFull' => $beritaFull
+    //     ]);
+    // }
+
+    public function viewDetailBerita($slug)
     {
         $berita = Berita::select('*')
             ->where('slug', $slug)
             ->get();
 
-        $kategori = ['GROW', 'GLI', 'SUAR', 'After Class Report'];
-        $beritaFull = Berita::select('*')
-            ->whereIn('kategori', $kategori)
+        $dataBerita = Berita::select('*')
+            ->whereIn('kategori', ['GROW', 'GLI', 'SUAR'])
             ->orderBy('tanggal_rilis', 'desc')
+            ->limit(10)
             ->get();
 
-        return view('program-kami.green-leader.berita_gli', [
+        return view('program-kami.green-leader.detailBeritaGLI', [
             'berita' => $berita,
-            'beritaFull' => $beritaFull
+            'dataBerita' => $dataBerita
         ]);
     }
 

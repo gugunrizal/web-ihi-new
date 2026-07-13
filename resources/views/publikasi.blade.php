@@ -13,7 +13,7 @@
             @foreach ($data as $d)
             <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="bg-light rounded overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img class="img-fluid w-100" src="{{asset('img/' . $d->gambar_berita)}}" alt="">
+                    <img class="img-fluid w-100" src="{{asset('storage/' . $d->gambar_berita)}}" alt="">
                     <div class="p-4">
                         <a class="h3 d-block mb-3" href="{{route('viewDetailPublikasi', $d->slug)}}">{{$d->judul}}</a>
                         <p class="m-0">{{Str::limit($d->ringkasan_berita, 100)}}</p>

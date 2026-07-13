@@ -64,7 +64,8 @@ Route::prefix('/')->controller(UserController::class)->group(function () {
 Route::prefix('/green-leadership')->controller(LeaderController::class)->group(function () {
     Route::get('/', 'viewGLI')->name('viewGreenLeadership');
     Route::get('/berita', 'viewAllBeritaGLI')->name('viewAllBeritaGLI');
-    Route::get('/berita/{slug}', 'viewBeritaGLI')->name('viewBeritaGLI');
+    // Route::get('/berita/{slug}', 'viewBeritaGLI')->name('viewBeritaGLI');
+    Route::get('/berita/{slug}', 'viewDetailBerita')->name('viewDetailBerita');
     Route::get('/tim', 'viewTimGLI')->name('viewTimGLI');
 });
 
