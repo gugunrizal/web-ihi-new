@@ -22,22 +22,21 @@ class CivicController extends Controller
         return view('program-kami.civic-edu.berita_civic', ['berita' => $berita]);
     }
 
-    public function viewBeritaCivic($slug)
+    public function viewDetailBeritaCivic($slug)
     {
         $berita = Berita::select('*')
             ->where('slug', $slug)
-            ->orderBy('tanggal_rilis', 'desc')
             ->get();
 
-        $kategori = ['CIVIC'];
-        $beritaFull = Berita::select('*')
-            ->whereIn('kategori', $kategori)
+        $dataBerita = Berita::select('*')
+            ->where('kategori', 'CIVIC')
             ->orderBy('tanggal_rilis', 'desc')
+            ->limit(10)
             ->get();
 
-        return view('program-kami.civic-edu.berita_civic', [
+        return view('program-kami.civic-edu.detailBeritaCivic', [
             'berita' => $berita,
-            'beritaFull' => $beritaFull
+            'dataBerita' => $dataBerita
         ]);
     }
 

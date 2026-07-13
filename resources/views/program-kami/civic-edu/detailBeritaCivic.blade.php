@@ -72,53 +72,60 @@
         <!-- Container Starts -->
         <div class="container">
             <!-- Start Row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="blog-text section-header text-center">
-                        <div>
-                            <h2 class="section-title">Publikasi</h2>
-                            <div class="desc-text">
-                                <p>Publikasi terkini tentang Civic Education</p>
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <!-- Blog Detail Start -->
+                        @foreach ($berita as $d)
+
+                        <div class="mb-5">
+                            <img class="img-fluid w-100 rounded mb-5" src="{{asset('storage/' . $d->gambar_berita)}}" alt="">
+                            <h1 class="mb-4">{{$d->judul}}</h1>
+                            <div class="d-flex mb-4">
+                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>{{$d->penulis}}</small>
+                                <small class="me-3"><i class="far fa-calendar-alt text-primary me-2"></i>
+                                    {{ \Carbon\Carbon::parse($d->tanggal_rilis)->translatedFormat('d F Y') }}
+                                </small>
+                                <!-- <small class="me-3"><i class="far fa-folder text-primary me-2"></i>Web Design</small> -->
+                                <!-- <small class="me-3"><i class="far fa-comments text-primary me-2"></i>15 Comments</small> -->
                             </div>
+                            <p style="text-align: justify;"><?= htmlspecialchars_decode($d->isi_berita); ?></p>
+
                         </div>
+
+                        @endforeach
+                        <!-- Blog Detail End -->
+
                     </div>
-                </div>
 
-            </div>
-            <!-- End Row -->
-            <!-- Start Row -->
-            <div class="row justify-content-center">
-                <!-- Start Col -->
-                @foreach ($berita as $br)
+                    <!-- Sidebar Start -->
+                    <div class="col-lg-4">
 
-                <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-                    <!-- Blog Item Starts -->
-                    <div class="blog-item-wrapper">
-                        <div class="blog-item-img">
-                            <a href="{{route('viewDetailBeritaCivic', ['slug' => $br->slug])}}">
-                                <img src="{{asset('storage/' . $br->gambar_berita )}}" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-item-text">
-                            <h3>
-                                <a href="{{route('viewDetailBeritaCivic', ['slug' => $br->slug])}}">
-                                    {{Str::limit($br->judul, 50)}}
+                        <!-- Recent Post Start -->
+                        <div class="mb-5">
+                            <h4 class="d-inline-block text-danger text-uppercase border-bottom border-5 mb-4">Recent Post</h4>
+                            @foreach ($dataBerita as $d)
+
+                            <div class="d-flex rounded overflow-hidden mb-3">
+                                <img class="img-fluid" src="{{ asset('storage/' . $d->gambar_berita) }}"
+                                    style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                <a href="{{route('viewDetailBeritaCivic', ['slug' => $d->slug])}}" class="h6 d-flex align-items-center bg-light px-3 mb-0">
+                                    {{$d->judul}}
                                 </a>
-                            </h3>
-                            <p>{{ Str::limit($br->ringkasan_berita, 100) }}</p>
-                            <!-- <a href="" class=" read-more">5 Min read</a> -->
+                            </div>
+                            @endforeach
                         </div>
-                        <div class="author">
-                            <span class="name"><i class="lni-user"></i><a href="#">Posted by {{ $br->penulis }}</a></span>
-                            <span class="date float-right"><i class="lni-calendar"></i><a href="#">{{ $br->tanggal_rilis }}</a></span>
+                        <!-- Recent Post End -->
+
+                        <!-- Image Start -->
+                        <div class="mb-5">
+                            <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
                         </div>
+                        <!-- Image End -->
+
                     </div>
-                    <!-- Blog Item Wrapper Ends-->
+                    <!-- Sidebar End -->
                 </div>
-
-                @endforeach
-                <!-- End Col -->
-
             </div>
             <!-- End Row -->
         </div>

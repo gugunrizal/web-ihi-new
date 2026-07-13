@@ -73,7 +73,7 @@ Route::prefix('/green-leadership')->controller(LeaderController::class)->group(f
 Route::prefix('/civic-education')->controller(CivicController::class)->group(function () {
     Route::get('/', 'viewCivic')->name('viewCivicEducation');
     Route::get('/berita', 'viewAllBeritaCivic')->name('viewAllBeritaCivic');
-    Route::get('/berita/{slug}', 'viewBeritaCivic')->name('viewBeritaCivic');
+    Route::get('/berita/{slug}', 'viewDetailBeritaCivic')->name('viewDetailBeritaCivic');
     Route::get('/tim', 'viewTimCivic')->name('viewTimCivic');
 });
 
