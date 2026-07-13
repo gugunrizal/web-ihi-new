@@ -57,9 +57,9 @@
             <li class="nav-item">
               <a class="nav-link page-scroll" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="mx-3 btn btn-light text-dark" href="#">Login</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

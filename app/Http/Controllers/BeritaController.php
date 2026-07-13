@@ -10,7 +10,16 @@ class BeritaController extends Controller
 {
     public function viewDashboard()
     {
-        return view('admin.dashboard');
+        $publishCount = Berita::where('status', 'publish')->count();
+        $publikasiIHI = Berita::whereIn('kategori', ['After Class Report', 'Blog', 'Kotak Suara Lingkungan', 'Ekososlab'])->count();
+        $beritaGLI = Berita::whereIn('kategori', ['GLI', 'GROW', 'SUAR'])->count();
+        $beritaCivic = Berita::where('kategori', 'CIVIC')->count();
+        // $beritaYouRings = Berita::where('kategori', 'You Rings')->count();
+        // $beritaGreenYouth = Berita::where('kategori', 'Green Youth Movement')->count();
+        // $beritaGreenPublic = Berita::where('kategori', 'Green Public Interest Lawyer')->count();
+        // $beritaLaboratorium = Berita::where('kategori', 'Laboratorium Keadilan Sosial dan Ekologis')->count();
+        // $beritaJurnal = Berita::where('kategori', 'Jurnal Peradaban Hijau')->count();
+        return view('admin.dashboard', compact('publishCount', 'publikasiIHI', 'beritaGLI', 'beritaCivic'));
     }
 
     public function viewBerita()
@@ -43,9 +52,13 @@ class BeritaController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             $folder = 'thumbnail/' . date('Y') . '/' . date('m');
-            $thumbnail = $request
-                ->file('thumbnail')
-                ->store($folder, 'public');
+            $file = $request->file('thumbnail');
+            $originalName = $file->getClientOriginalName();
+            $thumbnail = $file->storeAs(
+                $folder,
+                $originalName,
+                'public'
+            );
         }
 
         Berita::create([
@@ -90,9 +103,13 @@ class BeritaController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             $folder = 'thumbnail/' . date('Y') . '/' . date('m');
-            $thumbnail = $request
-                ->file('thumbnail')
-                ->store($folder, 'public');
+            $file = $request->file('thumbnail');
+            $originalName = $file->getClientOriginalName();
+            $thumbnail = $file->storeAs(
+                $folder,
+                $originalName,
+                'public'
+            );
         }
 
         $berita->update([

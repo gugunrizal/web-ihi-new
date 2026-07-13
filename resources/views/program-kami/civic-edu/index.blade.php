@@ -58,9 +58,9 @@
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#contact">Contact</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="mx-3 btn btn-light text-dark" href="#">Login</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                         <h2 class="head-title">Civic Education</h2>
                         <p>Saatnya menjadi masyarakat yang lebih Cerdas!</p>
                         <div class="header-button">
-                            <a href="#" rel="nofollow" target="_blank" class="btn btn-border-filled-civic">Login LMS</a>
+                            <a href="https://program.instituthijauindonesia.or.id/" rel="nofollow" target="_blank" class="btn btn-border-filled-civic">Login LMS</a>
                             <a href="{{route('viewHome')}}" rel="nofollow" class="btn btn-border">Kembali</a>
                         </div>
                     </div>

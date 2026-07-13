@@ -43,7 +43,9 @@
                                         <i class="fa-solid fa-star"></i>
                                     </div>
                                     <div>
-                                        <div class="fs-4 fw-bold text-white"><span class="counter">45</span>/<span class="counter">76</span></div>
+                                        <div class="fs-4 fw-bold text-white">
+                                            <span class="counter">{{ $publishCount }} Berita</span>
+                                        </div>
                                         <h3 class="fs-13 fw-semibold text-truncate-1-line text-white">Semua Berita</h3>
                                     </div>
                                 </div>
@@ -62,7 +64,9 @@
                                         <img src="{{asset('img/logo-program/Logo-Civic.png')}}" class="img-fluid" alt="">
                                     </div>
                                     <div>
-                                        <div class="fs-4 fw-bold text-white"><span class="counter">48</span>/<span class="counter">86</span></div>
+                                        <div class="fs-4 fw-bold text-white">
+                                            <span class="counter">{{ $beritaCivic }} Berita</span>
+                                        </div>
                                         <h3 class="fs-13 fw-semibold text-truncate-1-line text-white">Civic Education</h3>
                                     </div>
                                 </div>
@@ -81,7 +85,9 @@
                                         <img src="{{asset('img/logo-program/Logo-GLI.png')}}" class="img-fluid" alt="">
                                     </div>
                                     <div>
-                                        <div class="fs-4 fw-bold text-white"><span class="counter">16</span>/<span class="counter">20</span></div>
+                                        <div class="fs-4 fw-bold text-white">
+                                            <span class="counter">{{ $beritaGLI }} Berita</span>
+                                        </div>
                                         <h3 class="fs-13 fw-semibold text-truncate-1-line text-white">Green Leadership Indonesia</h3>
                                     </div>
                                 </div>
@@ -100,8 +106,10 @@
                                         <i class="feather-activity"></i>
                                     </div>
                                     <div>
-                                        <div class="fs-4 fw-bold text-dark"><span class="counter">46.59</span>%</div>
-                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Conversion Rate</h3>
+                                        <div class="fs-4 fw-bold text-dark">
+                                            <span class="counter">{{ $publikasiIHI }} Berita</span>
+                                        </div>
+                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Publikasi IHI</h3>
                                     </div>
                                 </div>
                                 <a href="javascript:void(0);" class="">

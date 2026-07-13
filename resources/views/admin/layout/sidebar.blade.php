@@ -25,12 +25,12 @@
                         <span class="nxl-mtext">Berita</span>
                     </a>
                 </li>
-                <li class="nxl-item nxl-hasmenu">
+                <!-- <li class="nxl-item nxl-hasmenu">
                     <a href="" class="nxl-link">
                         <span class="nxl-micon"><i class="fa-solid fa-image"></i></span>
                         <span class="nxl-mtext">Foto Berita</span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

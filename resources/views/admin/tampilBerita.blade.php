@@ -104,7 +104,7 @@
                                             <td>{{$b->kategori}}</td>
                                             <td>{{$b->status}}</td>
                                             <td>
-                                                <img src="{{asset('img/'.$b->gambar_berita)}}" alt="" width="100px">
+                                                <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="100px">
                                             </td>
                                             <td>
                                                 <a href="{{route('hapusBerita', $b->id)}}" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus berita ini?')">
