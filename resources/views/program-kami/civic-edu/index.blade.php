@@ -120,7 +120,7 @@
                         <div>
                             <h2 class="section-title">Our Speakers</h2>
                             <div class="desc-text">
-                                <p>Prepare Yourslef for Green Leadership Indonesia</p>
+                                <p>Prepare Yourslef for Civic Education</p>
                             </div>
                         </div>
                     </div>
@@ -133,157 +133,169 @@
 
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/1.png')}}" class="img-fluid rounded" alt="Dr. Qurnia Indah Permata Sari">
+                        <img src="{{asset('img/civic-edu/narsum/qurnia.png')}}" class="img-fluid rounded" alt="Dr. Qurnia Indah Permata Sari">
                         <p class="text-center mt-2 mt-2">Dr. Qurnia Indah Permata Sari</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/2.png')}}" class="img-fluid rounded" alt="Ahmad Fauzi (Ray Rangkuti)">
+                        <img src="{{asset('img/civic-edu/narsum/ray.png')}}" class="img-fluid rounded" alt="Ahmad Fauzi (Ray Rangkuti)">
                         <p class="text-center mt-2">Ahmad Fauzi (Ray Rangkuti)</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/3.png')}}" class="img-fluid rounded" alt="Dani Wahyu Munggoro">
+                        <img src="{{asset('img/civic-edu/narsum/dani.png')}}" class="img-fluid rounded" alt="Dani Wahyu Munggoro">
                         <p class="text-center mt-2">Dani Wahyu Munggoro</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/4.png')}}" class="img-fluid rounded" alt="Zainal Arifin Mochtar, S.H., LL.M.">
+                        <img src="{{asset('img/civic-edu/narsum/zainal.png')}}" class="img-fluid rounded" alt="Zainal Arifin Mochtar, S.H., LL.M.">
                         <p class="text-center mt-2">Zainal Arifin Mochtar, S.H., LL.M.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/5.png')}}" class="img-fluid rounded" alt="Prof. Dr. H. Jimly Asshiddiqie, S.H., M.H.">
+                        <img src="{{asset('img/civic-edu/narsum/jimly.png')}}" class="img-fluid rounded" alt="Prof. Dr. H. Jimly Asshiddiqie, S.H., M.H.">
                         <p class="text-center mt-2">Prof. Dr. H. Jimly Asshiddiqie, S.H., M.H.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/6.png')}}" class="img-fluid rounded" alt="Bivitri Susanti, S.H., LL.M.">
+                        <img src="{{asset('img/civic-edu/narsum/bivitri.png')}}" class="img-fluid rounded" alt="Bivitri Susanti, S.H., LL.M.">
                         <p class="text-center mt-2">Bivitri Susanti, S.H., LL.M.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/7.png')}}" class="img-fluid rounded" alt="Sudirman Said, S.Ak., MBA.">
+                        <img src="{{asset('img/civic-edu/narsum/sudirman.png')}}" class="img-fluid rounded" alt="Sudirman Said, S.Ak., MBA.">
                         <p class="text-center mt-2">Sudirman Said, S.Ak., MBA.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/8.png')}}" class="img-fluid rounded" alt="Prof. Dr. Bambang Shergi Laksmono, M.Sc.">
+                        <img src="{{asset('img/civic-edu/narsum/bambang.png')}}" class="img-fluid rounded" alt="Prof. Dr. Bambang Shergi Laksmono, M.Sc.">
                         <p class="text-center mt-2">Prof. Dr. Bambang Shergi L, M.Sc.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/9.png')}}" class="img-fluid rounded" alt="H. Anies Rashid Baswedan, S.E., M.PP., Ph.D.">
+                        <img src="{{asset('img/civic-edu/narsum/anies.png')}}" class="img-fluid rounded" alt="H. Anies Rashid Baswedan, S.E., M.PP., Ph.D.">
                         <p class="text-center mt-2">H. Anies R. Baswedan, S.E., M.PP., Ph.D.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/10.png')}}" class="img-fluid rounded" alt="Dr. Drs. Imam Budidarmawan Prasojo, M.A., Ph.D.">
+                        <img src="{{asset('img/civic-edu/narsum/imam.png')}}" class="img-fluid rounded" alt="Dr. Drs. Imam Budidarmawan Prasojo, M.A., Ph.D.">
                         <p class="text-center mt-2">Dr. Drs. Imam Budidarmawan P, M.A., Ph.D.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/11.png')}}" class="img-fluid rounded" alt="Prof. Dr. Djohermansyah Djohan, M.A.">
+                        <img src="{{asset('img/civic-edu/narsum/djo.png')}}" class="img-fluid rounded" alt="Prof. Dr. Djohermansyah Djohan, M.A.">
                         <p class="text-center mt-2">Prof. Dr. Djohermansyah Djohan, M.A.</p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
                         <img src="{{asset('img/civic-edu/narsum/12.png')}}" class="img-fluid rounded" alt="Eberta Kawima">
                         <p class="text-center mt-2">Eberta Kawima</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/13.png')}}" class="img-fluid rounded" alt="Titi Anggraini, S.H., M.H.">
+                        <img src="{{asset('img/civic-edu/narsum/titi.png')}}" class="img-fluid rounded" alt="Titi Anggraini, S.H., M.H.">
                         <p class="text-center mt-2">Titi Anggraini, S.H., M.H.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/14.png')}}" class="img-fluid rounded" alt="Dr. Refly Harun, S.H., M.H., LL.M.">
+                        <img src="{{asset('img/civic-edu/narsum/refly.png')}}" class="img-fluid rounded" alt="Dr. Refly Harun, S.H., M.H., LL.M.">
                         <p class="text-center mt-2">Dr. Refly Harun, S.H., M.H., LL.M.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/15.png')}}" class="img-fluid rounded" alt="Dr. Revrisond Baswir, M.B.A., Ak., CA">
+                        <img src="{{asset('img/civic-edu/narsum/revrisond.png')}}" class="img-fluid rounded" alt="Dr. Revrisond Baswir, M.B.A., Ak., CA">
                         <p class="text-center mt-2">Dr. Revrisond Baswir, M.B.A., Ak., CA</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/16.png')}}" class="img-fluid rounded" alt="Prof. Dr. R. Siti Zuhro, MA.">
+                        <img src="{{asset('img/civic-edu/narsum/yulianto.png')}}" class="img-fluid rounded" alt="Yulianto Sudrajat, S.Sos., M.Ikom">
+                        <p class="text-center mt-2">Yulianto Sudrajat, S.Sos., M.Ikom</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item position-relative">
+                        <img src="{{asset('img/civic-edu/narsum/haris.png')}}" class="img-fluid rounded" alt="Haris Azhar">
+                        <p class="text-center mt-2">Haris Azhar</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item position-relative">
+                        <img src="{{asset('img/civic-edu/narsum/siti.png')}}" class="img-fluid rounded" alt="Prof. Dr. R. Siti Zuhro, MA.">
                         <p class="text-center mt-2">Prof. Dr. R. Siti Zuhro, MA.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/17.png')}}" class="img-fluid rounded" alt="Muhammad Isnur, S.H., M.H.">
+                        <img src="{{asset('img/civic-edu/narsum/isnur.png')}}" class="img-fluid rounded" alt="Muhammad Isnur, S.H., M.H.">
                         <p class="text-center mt-2">Muhammad Isnur, S.H., M.H.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/18.png')}}" class="img-fluid rounded" alt="M. Ridha Saleh">
+                        <img src="{{asset('img/civic-edu/narsum/ridha.png')}}" class="img-fluid rounded" alt="M. Ridha Saleh">
                         <p class="text-center mt-2">M. Ridha Saleh</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/19.png')}}" class="img-fluid rounded" alt="Ahmad Arif">
+                        <img src="{{asset('img/civic-edu/narsum/ahmad.png')}}" class="img-fluid rounded" alt="Ahmad Arif">
                         <p class="text-center mt-2">Ahmad Arif</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/20.png')}}" class="img-fluid rounded" alt="Chalid Muhammad">
+                        <img src="{{asset('img/civic-edu/narsum/chalid.png')}}" class="img-fluid rounded" alt="Chalid Muhammad">
                         <p class="text-center mt-2">Chalid Muhammad</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/21.png')}}" class="img-fluid rounded" alt="Hikmat Hardono">
+                        <img src="{{asset('img/civic-edu/narsum/hikmat.png')}}" class="img-fluid rounded" alt="Hikmat Hardono">
                         <p class="text-center mt-2">Hikmat Hardono</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/22.png')}}" class="img-fluid rounded" alt="Noer Fauzi Rachman">
+                        <img src="{{asset('img/civic-edu/narsum/noer.png')}}" class="img-fluid rounded" alt="Noer Fauzi Rachman">
                         <p class="text-center mt-2">Noer Fauzi Rachman</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/23.png')}}" class="img-fluid rounded" alt="Suwiryo Ismail">
+                        <img src="{{asset('img/civic-edu/narsum/suwiryo.png')}}" class="img-fluid rounded" alt="Suwiryo Ismail">
                         <p class="text-center mt-2">Suwiryo Ismail</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/24.png')}}" class="img-fluid rounded" alt="Danang Widoyoko">
+                        <img src="{{asset('img/civic-edu/narsum/danang.png')}}" class="img-fluid rounded" alt="Danang Widoyoko">
                         <p class="text-center mt-2">Danang Widoyoko</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/25.png')}}" class="img-fluid rounded" alt="Farah Sofa">
+                        <img src="{{asset('img/civic-edu/narsum/farah.png')}}" class="img-fluid rounded" alt="Farah Sofa">
                         <p class="text-center mt-2">Farah Sofa</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item position-relative">
-                        <img src="{{asset('img/civic-edu/narsum/27.png')}}" class="img-fluid rounded" alt="Dr. Ir. Pramono Anung Wibowo, M.M.">
+                        <img src="{{asset('img/civic-edu/narsum/pramono.png')}}" class="img-fluid rounded" alt="Dr. Ir. Pramono Anung Wibowo, M.M.">
                         <p class="text-center mt-2">Dr. Ir. Pramono Anung Wibowo, M.M.</p>
                     </div>
                 </div>
