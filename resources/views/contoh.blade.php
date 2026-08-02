@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Galeri Logo Responsif | Hover Zoom In & Out</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institut Hijau Indonesia · Maintenance</title>
+    <!-- Font & Ikon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,360 +18,358 @@
         }
 
         body {
-            background: linear-gradient(145deg, #f6f9fc 0%, #eef2f5 100%);
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-            padding: 2rem 1.5rem;
+            background: linear-gradient(145deg, #f0f9f0 0%, #d4e8d4 100%);
+            padding: 1.5rem;
+            position: relative;
         }
 
-        /* Container utama dengan pendekatan modern */
-        .logo-gallery {
-            max-width: 1300px;
-            width: 100%;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(0px);
-            border-radius: 3rem;
-            padding: 2rem 1.8rem;
-            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease;
-        }
-
-        /* Judul kecil untuk kesan elegan */
-        .gallery-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .gallery-header h1 {
-            font-size: 1.9rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #1F2A3A, #2C3E50);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
-        }
-
-        .gallery-header p {
-            color: #5a6874;
-            margin-top: 0.5rem;
-            font-weight: 400;
-        }
-
-        /* GRID: 2 baris, baris pertama 4 item, baris kedua 3 item */
-        /* Pendekatan fleksibel dengan CSS Grid, responsif sempurna */
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            /* default: 4 kolom */
-            gap: 1.8rem;
-            justify-items: center;
-            align-items: center;
-        }
-
-        /* Item logo dasar */
-        .logo-item {
-            width: 100%;
-            max-width: 260px;
-            background: white;
-            border-radius: 2rem;
-            padding: 1.6rem 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
-            transition: all 0.25s ease;
-            cursor: pointer;
-            backdrop-filter: blur(2px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-
-        /* Gaya untuk gambar / logo (SVG atau teks/ikon) */
-        .logo-img {
-            width: 100%;
-            max-width: 150px;
-            height: auto;
-            transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            display: block;
-            object-fit: contain;
-        }
-
-        /* Efek HOVER Zoom In + Zoom Out (animasi kustom) */
-        /* zoom in: scale naik jadi 1.12, zoom out: kembali scale 1 */
-        .logo-item:hover .logo-img {
-            animation: logoZoomBounce 0.4s ease-in-out forwards;
-        }
-
-        /* Keyframes untuk zoom in lalu stabil, tapi agar terasa "zoom in & zoom out"
-           kita buat animasi: scale membesar (zoom in), lalu sedikit kembali (zoom out effect)
-           namun tetap pada posisi membesar? tidak, sesuai permintaan "animasi hover zoom in dan zoom out"
-           umumnya: saat hover membesar, saat keluar mengecil. tapi diperjelas: 
-           kita akan memberikan efek zoom in ketika mouse masuk, dan zoom out ketika mouse keluar (transition balik)
-           plus sentuhan animasi berulang? lebih tepat: gunakan transisi dasar, tapi agar lebih hidup
-           kita buat efek tambahan: ketika hover membesar 1.12x (zoom in), lalu ketika mouse leave kembali ke 1 (zoom out)
-           dengan timing smooth. serta tambahan sedikit scaling effect di awal hover agar "zoom in" terasa playful.
-           Untuk memenuhi "zoom in dan zoom out" secara visual, saya sertakan pulse singkat? 
-           sesuai keinginan: hover => zoom in (scale up), leave => zoom out (scale down)
-        */
-
-        /* alternatif: gunakan transition biasa pada .logo-img, lalu hover scale.
-           Itu sudah mencakup zoom in (hover) dan zoom out (leave). 
-           Namun agar lebih kaya, kita tambah sedikit efek transisi yang halus.
-        */
-
-        /* Pendekatan final: transisi dasar + hover scaling, didukung performa */
-        .logo-img {
-            transition: transform 0.35s cubic-bezier(0.2, 0.85, 0.4, 1);
-            transform: scale(1);
-        }
-
-        .logo-item:hover .logo-img {
-            transform: scale(1.12);
-            /* Zoom In saat hover */
-        }
-
-        /* Tambahan sentuhan : untuk efek "keluar" sudah otomatis zoom out (scale kembali ke 1) */
-        /* Namun kita inginkan ada 'zoom out' animation yang terlihat? dengan transisi standar sudah cukup.
-           Untuk memberi kesan lebih dinamis, kita tambahkan efek bayangan dan transisi pada item */
-
-        .logo-item:hover {
-            box-shadow: 0 22px 35px -12px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-            background: white;
-            border-color: #cbdde9;
-        }
-
-        /* penyesuaian logo berupa teks atau ikon buatan (karena logo asli bisa berupa SVG / FontAwesome / teks) */
-        /* Agar lebih menarik, kita buat beragam contoh logo modern (menggunakan Font Awesome gratis dari CDN) */
-        /* Serta beberapa logo berupa teks bergaya brand untuk memenuhi 7 item */
-
-        /* Gaya alternatif jika gambar tidak ada, atau menggunakan elemen vector */
-        .custom-logo-svg {
-            width: 120px;
-            height: auto;
-        }
-
-        /* responsif: untuk layar tablet, pastikan tetap rapi */
-        @media (max-width: 950px) {
-            .logo-grid {
-                gap: 1.2rem;
-            }
-
-            .logo-item {
-                padding: 1.2rem 0.8rem;
-            }
-
-            .gallery-header h1 {
-                font-size: 1.6rem;
-            }
-        }
-
-        /* di layar menengah (max 800px), grid masih 4 kolom, tapi logo-item max-width menyesuaikan */
-        @media (max-width: 780px) {
-            .logo-grid {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-                gap: 1rem;
-            }
-
-            .logo-img {
-                max-width: 110px;
-            }
-        }
-
-        /* Pada layar kecil (max 640px), baris pertama 4 logo & kedua 3 logo tetap, 
-           tapi kita ubah menjadi 2 kolom? TIDAK, karena permintaan khusus: tetap 2 baris 
-           (baris1: 4 logo, baris2: 3 logo). Maka pakai grid dengan 4 kolom di semua ukuran,
-           namun di HP kecil mungkin terlalu sempit? Kita gunakan media query untuk memastikan 
-           item tetap rapi. Mengingat kontennya logo, kita override agar tampil proporsional.
-           Lebih baik: pada max-width 600px, grid-template-columns diatur ulang secara manual?
-           Tapi karena permintaan spesifik 2 baris (4 dan 3) secara visual, sebaiknya tetap menggunakan
-           grid 4 kolom, dan baris ke-2 hanya mengisi 3 item, sisanya kosong? Tidak, kita tempatkan 7 item,
-           secara otomatis di grid 4 kolom : baris1 = 4 item, baris2 = 3 item (sempurna).
-           Namun di layar sangat kecil (480px) agar tidak terlalu sempit, kita kurangi padding dan ukuran font.
-        */
-        @media (max-width: 550px) {
-            .logo-gallery {
-                padding: 1.5rem 1rem;
-            }
-
-            .logo-grid {
-                gap: 0.9rem;
-            }
-
-            .logo-item {
-                padding: 0.9rem 0.5rem;
-                border-radius: 1.5rem;
-            }
-
-            .logo-img {
-                max-width: 85px;
-            }
-
-            .custom-logo-svg {
-                width: 80px;
-            }
-        }
-
-        @media (max-width: 420px) {
-            .logo-img {
-                max-width: 70px;
-            }
-
-            .logo-item {
-                padding: 0.7rem 0.3rem;
-            }
-
-            .gallery-header h1 {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Penataan untuk teks logo alternatif (jika ingin bentuk unik) */
-        .text-logo {
-            font-weight: 800;
-            font-size: 1.8rem;
-            background: linear-gradient(125deg, #2b5876, #4e4376);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-            transition: all 0.2s;
-        }
-
-        .logo-item:hover .text-logo {
-            background: linear-gradient(125deg, #f12711, #f5af19);
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
-
-        /* ikon khusus dengan font awesome (kami sertakan CDN) */
-        .fa-logo {
-            font-size: 4rem;
-            color: #1e466e;
-            transition: all 0.2s;
-        }
-
-        .logo-item:hover .fa-logo {
-            color: #e67e22;
-            transform: scale(1.05);
-        }
-
-        /* sederhanakan style gambar SVG agar konsisten */
-        img.logo-img {
+        /* efek daun latar (dekoratif) */
+        body::before {
+            content: "🌿";
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.03;
+            bottom: -5%;
+            right: -5%;
+            transform: rotate(15deg);
             pointer-events: none;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 2.5rem;
-            font-size: 0.8rem;
-            color: #6c7a89;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            padding-top: 1.5rem;
+        body::after {
+            content: "🍃";
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.03;
+            top: -2%;
+            left: -2%;
+            transform: rotate(-20deg);
+            pointer-events: none;
         }
 
-        /* Animasi tambahan sentuhan kecil untuk memperkuat zoom in-out */
-        /* sebenarnya hover scale sudah cukup, namun kita akan berikan efek transisi yg lebih mulus */
+        .maintenance-card {
+            max-width: 780px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.80);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 3.5rem;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 30px 60px rgba(0, 40, 0, 0.15),
+                0 10px 20px rgba(0, 20, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(60, 130, 60, 0.15);
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ikon utama + animasi */
+        .icon-wrapper {
+            display: inline-block;
+            background: #1f4f2b;
+            padding: 1.2rem 1.5rem;
+            border-radius: 80px;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 12px 24px -8px rgba(20, 70, 20, 0.3);
+        }
+
+        .icon-wrapper i {
+            font-size: 4rem;
+            color: #d4edb0;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            animation: pulse-icon 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-icon {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.08) rotate(4deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a3a1f;
+            margin-bottom: 0.5rem;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2b5e2b;
+            background: rgba(60, 130, 60, 0.08);
+            display: inline-block;
+            padding: 0.4rem 1.8rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(60, 130, 60, 0.15);
+            margin-bottom: 1.8rem;
+        }
+
+        .status-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #1e3d22;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1rem 1.8rem;
+            border-radius: 60px;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(80, 140, 80, 0.2);
+            margin-bottom: 1.8rem;
+            font-weight: 450;
+        }
+
+        .status-message i {
+            color: #2d7a2d;
+            margin-right: 0.6rem;
+        }
+
+        .progress-area {
+            margin: 2rem 0 2.4rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1d4a1d;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.4rem;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 12px;
+            background: #d9e8d9;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 20, 0, 0.05);
+            border: 1px solid rgba(60, 130, 60, 0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 68%;
+            background: linear-gradient(90deg, #2d7a2d, #4fa84f, #75c775);
+            border-radius: 30px;
+            box-shadow: 0 0 12px #4fa84f66;
+            animation: shimmer 2.4s infinite linear;
+            background-size: 200% 100%;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem 2rem;
+            background: rgba(235, 248, 235, 0.5);
+            border-radius: 80px;
+            padding: 0.8rem 1.8rem;
+            margin: 1.8rem 0 2.2rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(60, 130, 60, 0.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1e471e;
+        }
+
+        .info-item i {
+            color: #2b6e2b;
+            font-size: 1.2rem;
+        }
+
+        .btn-redirect {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            background: #1f4f2b;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 1rem 2.8rem;
+            border-radius: 80px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 24px -10px rgba(20, 70, 20, 0.4);
+            letter-spacing: 0.3px;
+            margin-top: 0.2rem;
+        }
+
+        .btn-redirect i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-redirect:hover {
+            background: #2a6636;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 32px -12px rgba(20, 70, 20, 0.5);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-redirect:hover i {
+            transform: translateX(6px);
+        }
+
+        .btn-redirect:active {
+            transform: scale(0.97);
+        }
+
+        .footer-note {
+            margin-top: 2.4rem;
+            font-size: 0.85rem;
+            color: #3f6a3f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            border-top: 1px dashed rgba(60, 130, 60, 0.2);
+            padding-top: 1.8rem;
+        }
+
+        .footer-note i {
+            color: #4b8c4b;
+        }
+
+        .footer-note span {
+            background: rgba(60, 130, 60, 0.05);
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        /* responsif */
+        @media (max-width: 550px) {
+            .maintenance-card {
+                padding: 2rem 1.2rem;
+                border-radius: 2.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .icon-wrapper i {
+                font-size: 3rem;
+            }
+
+            .btn-redirect {
+                font-size: 1rem;
+                padding: 0.8rem 2rem;
+                width: 100%;
+            }
+
+            .info-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.7rem;
+                border-radius: 40px;
+                padding: 1rem 1rem;
+            }
+
+            .status-message {
+                font-size: 0.95rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+
+        /* aksesibilitas & hover */
+        .btn-redirect:focus-visible {
+            outline: 3px solid #b3e0b3;
+            outline-offset: 3px;
+        }
     </style>
-    <!-- Font Awesome 6 (free) untuk ikon logo yang variatif -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
-    <div class="logo-gallery">
-        <div class="gallery-header">
-            <h1>✨ Koleksi Logo Creative</h1>
-            <p>Hover pada logo → efek zoom in & zoom out halus | 2 baris (4 + 3)</p>
+    <div class="maintenance-card">
+        <!-- ikon utama -->
+        <div class="icon-wrapper">
+            <i class="fas fa-seedling"></i>
         </div>
 
-        <div class="logo-grid">
-            <!-- Logo 1 (Baris 1, kolom 1) -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <i class="fab fa-react fa-4x fa-logo"></i>
-                </div>
-            </div>
+        <h1>Institut Hijau Indonesia</h1>
+        <div class="subhead">
+            <i class="fas fa-rotate fa-spin" style="margin-right: 0.5rem;"></i> Pemeliharaan & Migrasi Data
+        </div>
 
-            <!-- Logo 2 (Baris 1, kolom 2) -> menggunakan gambar SVG data uri modern -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <svg class="custom-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="url(#grad1)" stroke="#2C3E50" stroke-width="2" />
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#FF6B6B" />
-                                <stop offset="100%" stop-color="#556270" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M32 50 L68 50 M50 32 L50 68" stroke="white" stroke-width="6" stroke-linecap="round" />
-                        <circle cx="50" cy="50" r="12" fill="white" stroke="#2C3E50" stroke-width="3" />
-                    </svg>
-                </div>
-            </div>
+        <div class="status-message">
+            <i class="fas fa-cloud-upload-alt"></i> Kami sedang memindahkan data ke infrastruktur baru
+        </div>
 
-            <!-- Logo 3 (Baris 1, kolom 3) -> icon brand vue -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <i class="fab fa-vuejs fa-4x fa-logo" style="color:#42b883;"></i>
-                </div>
+        <!-- progress bar -->
+        <div class="progress-area">
+            <div class="progress-label">
+                <span><i class="fas fa-database" style="margin-right: 6px;"></i>Migrasi data</span>
+                <span>68%</span>
             </div>
-
-            <!-- Logo 4 (Baris 1, kolom 4) -> Logo teks kreatif dengan style modern -->
-            <div class="logo-item">
-                <div class="logo-img text-logo" style="font-size:2rem; font-weight:800;">
-                    LUMINA
-                </div>
-            </div>
-
-            <!-- Logo 5 (Baris 2, kolom 1) -> gambar CSS murni (bentuk diamond) atau svg dinamis -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="20" y="20" width="60" height="60" rx="15" fill="#3B82F6" />
-                        <path d="M40 40 L60 60 M60 40 L40 60" stroke="white" stroke-width="5" stroke-linecap="round" />
-                        <circle cx="50" cy="50" r="10" fill="white" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Logo 6 (Baris 2, kolom 2) -> angular logo dari fontawesome -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <i class="fab fa-angular fa-4x fa-logo" style="color:#c3002f;"></i>
-                </div>
-            </div>
-
-            <!-- Logo 7 (Baris 2, kolom 3) -> Logo berupa globe modern -->
-            <div class="logo-item">
-                <div class="logo-img">
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#1E293B" stroke="#F59E0B" stroke-width="3" />
-                        <ellipse cx="50" cy="50" rx="20" ry="40" stroke="#FCD34D" stroke-width="2.5" fill="none" />
-                        <ellipse cx="50" cy="50" rx="40" ry="20" stroke="#FCD34D" stroke-width="2.5" fill="none" />
-                        <circle cx="50" cy="50" r="6" fill="#F59E0B" />
-                    </svg>
-                </div>
+            <div class="progress-bar-bg">
+                <div class="progress-fill"></div>
             </div>
         </div>
-        <footer>
-            ⚡ 7 logo unik • Baris pertama: 4 item • Baris kedua: 3 item • Efek hover : zoom in (scale 1.12) & zoom out (scale 1) dengan transisi halus
-        </footer>
+
+        <!-- info ringkas -->
+        <div class="info-grid">
+            <div class="info-item">
+                <i class="fas fa-server"></i> Server baru
+            </div>
+            <div class="info-item">
+                <i class="fas fa-shield-alt"></i> Keamanan ditingkatkan
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i> Perkiraan selesai: 2 jam
+            </div>
+        </div>
+
+        <!-- TOMBOL ARAH KE PROGRAM -->
+        <a href="https://program.instituhijauindonesia.or.id" class="btn-redirect" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-arrow-right"></i> Kunjungi Program
+            <i class="fas fa-external-link-alt" style="font-size: 0.9rem; opacity: 0.7;"></i>
+        </a>
+
+        <div class="footer-note">
+            <i class="fas fa-leaf"></i>
+            <span>IHI</span>
+            <i class="fas fa-circle" style="font-size: 0.3rem; opacity: 0.5;"></i>
+            <span>Kembali lebih hijau</span>
+            <i class="fas fa-tree"></i>
+        </div>
     </div>
-
-    <!-- Penjelasan tambahan: 
-     Tampilan responsive menggunakan grid 4 kolom. Karena total logo 7, otomatis baris pertama 4 logo, 
-     baris kedua 3 logo. Semua logo memiliki class .logo-img yang diberi transisi transform 0.35s.
-     Pada hover .logo-item, .logo-img akan scale(1.12) (zoom in) dan ketika mouse leave kembali scale(1) => zoom out.
-     Efek ini memenuhi animasi zoom in dan zoom out persis saat interaksi hover.
-     Didukung pula efek bayangan dan transisi untuk meningkatkan pengalaman visual.
-     Setiap logo menggunakan ikon, SVG kustom, teks brand, ataupun font awesome, membuat tampilan menarik.
-     Ukuran grid menyesuaikan dari desktop hingga layar ponsel (responsif).
--->
 </body>
 
 </html>
